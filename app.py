@@ -68,6 +68,8 @@ def get_token_price(symbol):
     price = PriceMonitor.get_price_for_symbol(symbol)
     
     if price is not None:
+        print('hi')
+
         return jsonify({
             "success": True,
             "symbol": symbol,
