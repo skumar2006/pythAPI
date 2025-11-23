@@ -56,6 +56,8 @@ def get_token_price(symbol):
     
     # Check if symbol is supported
     if symbol not in PriceMonitor.get_available_tokens():
+        print('hi')
+
         return jsonify({
             "success": False,
             "error": f"Unsupported token: {symbol}",
