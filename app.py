@@ -72,9 +72,10 @@ def get_token_price(symbol):
             "price": price,
             "timestamp": datetime.now().isoformat()
         })
-        print('hi')
 
     else:
+        print('hi')
+
         return jsonify({
             "success": False,
             "error": f"Failed to fetch price for {symbol}"
