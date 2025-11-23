@@ -33,14 +33,16 @@ def health_check():
 def get_available_tokens():
     """Get list of all available tokens"""
     tokens = PriceMonitor.get_available_tokens()
+    print('hi')
     return jsonify({
         "success": True,
         "count": len(tokens),
         "tokens": tokens
-    })
+    }) 
+    
 
 
-@app.route('/api/price/<symbol>', methods=['GET'])
+@app.route('/api/price/<path:symbol>', methods=['GET'])
 def get_token_price(symbol):
     """
     Get current price for any token
