@@ -51,6 +51,8 @@ def get_token_price(symbol):
         symbol: Token symbol (e.g., BTC/USD, ETH/USD)
     """
     symbol = symbol.upper()
+    print('hi')
+
     
     # Check if symbol is supported
     if symbol not in PriceMonitor.get_available_tokens():
